@@ -37,4 +37,8 @@ public class VCMDLogin {
 		driver.findElement(By.id("captcha")).sendKeys(captcha, Keys.ENTER);
 		Thread.sleep(1000);        
 	}
+	@AfterTest
+	public void Logout(){
+		driver.close();
+	}
 }
